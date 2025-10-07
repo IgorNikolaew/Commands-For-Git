@@ -44,3 +44,6 @@ javac -encoding UTF-8 HelloJdk.java // Скомпилировать файл в 
 
 java -Dfile.encoding=UTF-8 HelloJdk // Запустить скомпилированный файл в среде GIT
 
+ 
+javac -d bin -encoding UTF-8 *.java // *.java означает, что скомпилированы будут все файлы с расширением .java, которые находятся в текущей папке — src.
+
