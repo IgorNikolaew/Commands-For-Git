@@ -34,5 +34,6 @@ SSH-ключ состоит из двух частей — публичной и
 
 
 javac -encoding UTF-8 HelloJdk.java // Скомпилировать файл в байт-код в среде GIT
+
 java -Dfile.encoding=UTF-8 HelloJdk // Запустить скомпилированный файл в среде GIT
 
