@@ -101,3 +101,32 @@ iter — создаёт заготовку для цикла по массиву
                     Если оно не равно 0 — программа завершилась некорректно.*/
                     System.exit(0); // код равен 0, программа была завершена намеренно
                     // break в этом случае не нужен
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+import java.util.Objects;
+
+public class Person {
+    private String firstName;
+    private String lastName;
+
+    // Конструктор, геттеры, сеттеры...
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true; // Проверка на себя
+        if (o == null || getClass() != o.getClass()) return false; // Проверка на null и класс
+        Person person = (Person) o; // Приведение типа
+        // Сравнение по значимым полям
+        return Objects.equals(firstName, person.firstName) &&
+               Objects.equals(lastName, person.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        // Используем те же поля, что и в equals!
+        return Objects.hash(firstName, lastName);
+    }
+}
+
