@@ -148,3 +148,21 @@ public class Person {
         }
         return hash; // возвращаем итоговый хеш
     }
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+ @Override
+    public String toString() {
+        String result = "Address{" +
+                "city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                ", houseNumber=" + houseNumber + '\'';
+
+        if(extraInfo != null) {
+            result = result + ", extraInfo.length=" + extraInfo.length();
+        } else {
+            result = result + ", extraInfo=null";
+        }
+
+        return result + ", residents=" + Arrays.toString(residents) + '}';
+    }
